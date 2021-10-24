@@ -1,0 +1,133 @@
+.header-works {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding-top: 90px;
+    padding-bottom: 0;
+    background-color: #f4f8f9;
+    overflow: hidden;
+  
+    /* Tablet */
+    @media (max-width: 1199px) {
+      padding-top: 30px;
+      padding-bottom: 0;
+      
+    }
+  
+    /* Mobile */
+    @media (max-width: 768px) {
+    }
+  }
+
+
+.header-nav-works {
+    margin-bottom: 0px;
+}
+
+.portfolio--works {
+    padding-bottom: 160px;
+
+    /* Tablet */
+    @media (max-width: 1199px) {
+        padding-bottom: 90px;
+    
+    }
+
+}
+
+.portfolio__title--works {
+    position: relative;
+   z-index: 1;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 70px;
+    text-align: center;
+
+    /* Mobile */
+    @media (max-width: 768px) {
+        width: auto;
+    }
+    
+    .title {
+        
+        display: inline;
+        font-size: 64px;
+        @include bottom-line(12px, 15px);
+
+        /* Mobile */
+        @media (max-width:768px) {
+            
+            text-align: left;
+            font-size: 42px;
+            @include bottom-line(12px, 8px);
+        }
+    }
+    
+}
+
+.footer-works {
+    background-color: #f4f8f9;
+    font-family: "Roboto Bold", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+
+    /* Tablet */
+    @media (max-width: 1199px) {
+        padding-top: 60px;
+    background-color: #ffffff;
+    font-size: 30px;
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+        font-size: 22px;
+    }
+}
+
+.footer-works__content {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.footer-works__content a {
+    font-size: 36px;
+
+    /* Mobile */
+    @media (max-width: 768px) {
+        font-size: 22px;
+    }
+}
+
+.footer-works__content p {
+    font-family: "Roboto Thin", sans-serif;
+}
+
+.footer-works__title {
+    margin-bottom: 15px;
+}
+
+.footer-works__img {
+    max-width: 1600px;
+    height: 663px;
+    margin-top: -200px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(./../img/works/bg-works.png);
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* Mobile */
+    @media (max-width: 768px) {
+        max-width: 800px;
+        height: 550px;
+       
+       
+        
+    }
+}
+
+.footer-works__socials .socials{
+justify-content: center
+
+ 
+}

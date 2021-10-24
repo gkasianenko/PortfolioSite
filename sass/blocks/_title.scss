@@ -1,0 +1,73 @@
+.title {
+  font-family: "Mplus 1p ExtraBold";
+  font-size: 90px;
+  font-weight: 400;
+}
+
+.title-2 {
+  font-family: "Mplus 1p ExtraBold";
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.title--section {
+    align-items: center;
+    display: inline;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 64px;
+    z-index: 0;
+    line-height: 1;
+    @include bottom-line(10px, 15px);
+}
+
+.title--skills {
+  font-size: 40px;
+
+  /* Tablet */
+  @media (max-width: 1199px) {
+  font-size: 32px;
+  }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    font-size: 30px;
+  }
+}
+
+.title--portfolio {
+  font-size: 28px;
+  font-weight: 400;
+  color: $textColor;
+
+  /* Tablet */
+  @media (max-width: 1199px) {
+  font-size: 24px;
+  }
+
+  &:active {
+    color: $textColor;
+  }
+}
+
+.title--thin {
+  font-size: 28px;
+  font-weight: 400;
+  color: #8fa5ae;
+  transition: color 0.3s;
+
+  /* Tablet */
+  @media (max-width: 1199px) {
+  font-size: 24px;
+  }
+
+  &:hover {
+      color: $aActive;
+  }
+
+  &:active {
+    color: $aActive;
+  }
+
+}

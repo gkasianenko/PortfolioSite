@@ -1,0 +1,17 @@
+/* Tablet */
+@media (max-width: 1199px) {
+    .container {
+		width: 770px;
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+	.container {
+		width: 320px;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}

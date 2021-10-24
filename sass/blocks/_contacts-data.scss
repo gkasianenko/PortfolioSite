@@ -1,0 +1,81 @@
+.contacts-data {
+    display: flex;
+    position: relative;
+}
+
+.contacts-data:not(:last-child) {
+    margin-bottom: 22px;
+
+    /* Tablet */
+    @media (max-width: 1199px) {
+    margin-bottom: 37px;
+    }
+}
+
+.contacts-data.email {
+    &:before {
+        position: absolute;
+        content: "Email";
+    }
+}
+
+.contacts-data.skype {
+    &:before {
+        position: absolute;
+        content: "Skype";
+    }
+}
+
+.contacts-data.phone {
+    
+    & a {
+        color: #96969d;
+    }
+
+    &:before {
+        position: absolute;
+        content: "Телефон";
+    }
+}
+
+.contacts-data.address {
+
+    & a {
+        color: #96969d;
+    }
+
+    &:before {
+        position: absolute;
+        content: "Адрес";
+    }
+}
+
+.contacts-data:before {
+    /* Tablet */
+    @media (max-width: 1199px) {
+    font-size: 18px;
+    top: -25px;
+    }
+    }
+
+
+.contacts-data a {
+    padding-left: 195px;
+
+    /* Tablet */
+    @media (max-width: 1199px) {
+    padding-left: 0;
+    }
+}
+
+.contacts-data .link {
+    border: none;
+    font-size: 20px;
+font-weight: 500;
+
+/* Tablet */
+@media (max-width: 1199px) {
+font-size: 18px;
+}
+
+}

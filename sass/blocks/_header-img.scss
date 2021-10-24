@@ -1,0 +1,32 @@
+.header__img {
+  max-width: 1600px;
+  height: 843px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -130px;
+
+  background-image: url(./../img/header/header-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+
+    /* Tablet */
+    @media (max-width: 1199px) {
+    background-image: url(./../img/header/header-bg-tab.jpg);
+    max-width: unset;
+    margin-top: -65px;
+    width: 768px;
+    height: 405px;
+    }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    background-image: url(./../img/header/header-bg-mob.jpg);
+      max-width: 100%;
+      
+      height: 300px;
+      margin-top: -60px;
+    transform: scale(1.1);
+
+    margin-bottom: -5px;
+  }
+}

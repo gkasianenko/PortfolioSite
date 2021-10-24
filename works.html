@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./fonts/mplus1p/mplus1p.css">
+    <link rel="stylesheet" href="./fonts/roboto/roboto.css">
+    <title>Веб-разработчик Герман Касьяненко</title>
+</head>
+
+<body>
+    <!--overlay-->
+    <div id="overlay"></div>
+    <!--mobile menu-->
+    <section class="mobile-menu">
+            <div class="mobile-menu__logo">
+                    <a href="#" class="logo">ГК</a>
+            </div>
+            <div class="mobile-menu__nav">
+                    <a href="#" class="mobile-nav-link">Услуги</a>
+                    <a href="#" class="mobile-nav-link">Работы</a>
+                    <a href="#" class="mobile-nav-link">Контакты</a>
+            </div>
+            <div class="mobile-menu__socials">
+                <div class="socials">
+                    <a href="#"class="social-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="48" viewBox="0 0 50 48"><g><g><image width="50" height="48" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAwCAYAAABT9ym6AAAHKElEQVRoQ71afYxcVRX/nbc76y6KdBE/Utadd++sLa4JErYRqigLAaWxflABjdogmqiJqVgxgQiRGrUBDUa0fxA1AmLl0/hRgygfLsYoiFWKutC18+59bZcYrQUpurg7c48565vNdHbm3ft2Z3v+2uw953fO7737zj3n3CF0SeI4jqMoOoeZTwewFoACsArASzIXzwN4FoABsJeZdwOYsNbaboRAywFRSknAm5n5fURUWQoWM1eJ6A4Atxlj9i4FQ2yWREQp9WYAnwVwwVIdt7Mjop8B2J4kya+L4hYiUi6XVRRFNwJ4R1FHBfV3OecuT9NUtmGQhBKhOI4/SUTXAegPQl6+0gvMfKW19hsA2AfnJaK1PoGZvwdgow9shdZ3EdHmJEn+lYefS2RoaOjkUql0L4BTVyjIUNgnarXahgMHDjzdyaAjkZGRkaF6vf4wAB3qbYX1kp6enrP37dt3sG2iaPfPNWvWnFSr1R5m5tEVDq4QPDP/ZW5u7uzp6el/thq2eyM9Sqn7AJxXyMuxU37AGCNpv97schGROI6vJaJtHeL6EzNL9no1gLcC2ATguC5xeA7AnUQ04ZybJqLbAIifRcLM26y1n+9IRCn1egBSOvR0CO4aY8yXGmtxHK+KouhTzHxFUynSajqXHby9HTCfIaIv9/f375icnJQyZl6UUl8HsKWDjbyNMWPMnsZ68xuJlFK/AXBGx8xAdF6SJA+2rmeJYTuA/wJ4xDk3CcCmafr3xhYYHx/vrVarryiVSto5NxpF0XpmrkVRdHW1WhW9o0QptRnAd3Pe9qPGmDcCcKKzQERrvYmZf+DZJqcspx4qsgUrlcq5zrlFD60Zwzm3KU3THzYTIaXUHwCcluesXq+/bv/+/fK0V1yUUucD+IXH0ePGGKm2ef6NxHE8TkS/9EXHzBdaa3/k0+vGehzHHyOim3xYzHyOtXZinojW+mZm/pDPCMANxpjPBOgtWyWO4+8Q0WU+IGa+2Vr7YZKPME3TwwCO9xiJzunGmNQH3o314eHh0Z6ent8BeLEH70i5XD6RKpXKm5xz3vqfmS+z1t7SjSBDMbTWn2bmG3z6URSdJR/51QC+mKcsXZy1dk0j1fmAu7U+MjLyonq9fgDAyz2Y1wiROwFckqdIRNcnSXJVtwIsgqOU+jaAj3hs7hIijwOQEz1P3maM8aXCIvEF62qt38/MOz0Ge4SIfMSDeYpyEqdp+mSw9y4qBn7DzwiRWQClPN+1Wu3kvKami3Evgorj+DQi+qPHx5wQ8fbDzKy6NX8qSrpSqYw5537vswslcqa19lEf2Eqsa63fzsw/9WELkSM5JXjDfrMxRgYQx1ziOL6ciL7mcfy8EHkqG3Hm6e4wxnTqDVaUnNb6dplkepzsJa31vcy8waO43xgTh8yXuslqdHS0b2Zm5m++rCoTSnkj0vHJ+DNXhKy1Vnr5YyZKqQ/KTDjA4XYh8k4APw5Q3lMul9dNTEzUAnSXrbJ69erj+vr6nggcjr+L1q5de/zs7OwhAH0B3o9ZGa+UkgL10oCYZgcGBl42348opWQKHjRZZ+brrLVSaM73yt2WsbGx0uHDh3cA+Ggg9n3GmA0NIlI0SvEYKhNRFG2pVqt/DjUI0SuXy+ujKJLpyboQ/UznEmPM3fNEsuwgDdOrmgCedM59IoqiIWb+OBHJxKJVfg5g59zc3EMHDx6cLuB8QbVSqYzU6/VziegDAN5SEOPpgYEBNTk5Ods8RdnKzF9tApKtc6UxZr6x0VpvY+bP5TgyzCyF5RXWWjmbOkpWCEoPdErLwyvEg5m3WmvnD8sFIkNDQwOlUkkCKTejMfP3rbUyY3JKKZkzyd+d5B5jzMUB0Ui2lAG53HwtVSwzv9Za+8JRRLKn/h5mvqcVmZmvstZeL5NFIpI++jXtvBPRG5IkeSwkMq31RmbeFaLbToeZ322tXTg2Fs1+O5QEM6VSaXhqaupQNlWUQ2q8xYE1xsiFaFA2y3bAf5ZIZKcxRg7LBVlEZHh4eDCKosfaHERfMMYsfCPZnPhUZo6YeSpNU6mOg0g0vCul/gHgpIJk9hLRGa03WG0verJRzG8BvLTJyb+ZeZ3vQy4SlFJK7tiP+iY99s8y8/p2MXS8scoyy/0ABhrgRDTtnLvIWvtIkYA76RYkcoSZz+/UF+XeIWqtz8qamhOagpGOUhqdnxDRU0Q0U6/XZVyzylorF//BUoDIIWbemNfceW91s20m2WHEE+EeY0zuELzVPoQIEcnQ/MIkSaby/HuJiHGWdr8JIO+M6DoRIrqlv79/S/MFUCcyQUSassxFMsgGMNwGsJtE/pr98kGK2SApREQQJf/39vZuIaKtLeXFUohI9/fKpkgtEX1lcHDwW7t375Yru2ApTKSBnM1l38vMlxLRGBHdmCTJtcGe/98+yO9apOT5lXPuVqXUrqU2bv8DWu3jFjC9XXsAAAAASUVORK5CYII="/></g></g></svg>
+                    </a>
+                    <a href="#"class="social-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" viewBox="0 0 50 50"><g><g><image width="50" height="50" xlink:href="data:image/png;base64,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"/></g></g></svg>
+                    </a>
+                    <a href="#"class="social-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" viewBox="0 0 50 50"><g><g><image width="50" height="50" xlink:href="data:image/png;base64,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"/></g></g></svg>
+                    </a>
+                    <a href="#"class="social-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" viewBox="0 0 50 50"><g><g><image width="50" height="50" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAEYklEQVRoQ92aa2iTVxjH/08una3TppcNLZuVMlcmbEOYBZuMXdyXooJfWnyzITKQtjCH7i4KY+BQZE5dC0kG64fCGmlUBJWKlzG1F2gdYxt0BCxTxurwlsZbN9O+zzhJE5Msqe+b9+QNTT6+ec7/Ob9zec5zLgRJv+XNvSUVtlADgFdAXA/m50AoJ7Y8KVwwqffACIPoMpiCAC6FpiqGRwMtD2VUgYyIrGr+utRqK1uvMtxEWA2gVKfeJDPOWQg901MPjg0FPpjUWT5hnhPI64qvOgL1Q4DaAZTn6jytXBhgjx2WfT/6W2/q1dQF0tT0zRNhh/0jAm0HMF+vM4329xm8u3wi8lVf3/v/aiwDzSCr3J4GC1M3gHqt4gbtgirxxqGe9mEtOppAnIpvK8B7Adi1iEq0iQD0yYC/9cDjNGcFaW7utY5bQwdA/N7jhPL6P1NnzXTF1kCgZTqbn6wgUQj7rW4wufNaSa3ixD01kaqN2WCygjg3+DoK3hPpkEydA4dat2RizwgyMyf2a20sc+1oW6Y58z+QmejUX4CJrbU9IiqxKz2apYCIdeKOo+QXE0Os1sqn2wUXTjx8OXmdSQFpVDw7CLQrV/WMY5eAZbXVWFZbhSpHGWw2a8Ks70IQ127czckdg3cO+tu/jBdOgMTSDr4ic8V+qX4RPt38GmprHBkru2XXcfw8Op4TCID7dtDSeDqTAHEqnt0AfZaranq555dWw/vFepTYH/VAuo1BEJFT7xnwt4t0KZaiiCzWYiu7JjEBxN6Pm9C4Ysms7WIcBGF16sFikTVHQVyKV2GgR1ZvWK0WnOl6d9beEL4kgIiecPf72/xRkMYN3uNEWCsL5OnK+Tja+U6KnKoyvu0dxtXxicT3X4N/I3z3H0NumXFi8FDbOort7G4Ldb2boqwVWPzUAgQOpmY250f+wI79pw1VOkvhydBUpYOcis8F8EWZHjKBBE79hoPdgzLdJGnRqwJEpOiG05G6ZyuxuWVlVHxeiQ0rX3wmpdLj1+9g7M/bKd/2+M4jfM/Y0IoJ0jZyur0eMNqMNtWK5TXo2LlOs0wkMo3Vm76Dyqy5TFZDgpeciucMQG8ZVdMLcvnqLWzaftio25nyfJacbs8wmGJjwsBPL8i5oTF83nHWgMfkKcIj5FJ8owx+waiiXpCuI5fQdeQno25jMwT0uzSQ5BqZHbWiILKGViFBQDwibbIXFATRyS4n/BYUJBZ+5SyIBQWJLojFkqKYlTTmMdeKJY1iSLgU7wkG1kgJ6gDMDL8EnOz3t63Ny8bKZJBHGyvZW10TQVK3umJIyTx8MA8k7fBBgMg8DjIJJPNxkICRdUBXOs+ONxrqUmLHlb9CGB27LiueIOsBnfBQNEemAqYoDrHj/Z6PtEXamILGa4UETDFc9AiYorl6S8DM9cvQ5DE956+nk2GK4sFAHKgonnAk986cf1STvhbEnzkBeJuBN3M40RcXND8A+L4gz5wyLW6Ffnj2H75FPANw5gHuAAAAAElFTkSuQmCC"/></g></g></svg>
+                    </a>
+                </div>
+            </div>
+            <a href="#" class="link link--mobile-nav">info@webdeveloper.ru</a>
+    </section>
+    <!--//Mobile menu-->
+    <!--header-->
+    <header class="header-works">
+        <div class="header-nav-works">
+            <div class="header-nav__container">
+                <a href="#" class="logo">ГК</a>
+                <div class="header__menu">
+                    <a href="#" class="nav-link">Главная</a>
+                    <a href="#" class="nav-link">Работы</a>
+                    <a href="#" class="nav-link">Контакты</a>
+                </div>
+                <div class="header__social">
+                    <a class="header-icon" href="#">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin-in" class="svg-inline--fa fa-linkedin-in fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg>
+                    </a>
+                    <a class="header-icon" href="#">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+                    </a>
+                    <a class="header-icon" href="#">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="vk" class="svg-inline--fa fa-vk fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M545 117.7c3.7-12.5 0-21.7-17.8-21.7h-58.9c-15 0-21.9 7.9-25.6 16.7 0 0-30 73.1-72.4 120.5-13.7 13.7-20 18.1-27.5 18.1-3.7 0-9.4-4.4-9.4-16.9V117.7c0-15-4.2-21.7-16.6-21.7h-92.6c-9.4 0-15 7-15 13.5 0 14.2 21.2 17.5 23.4 57.5v86.8c0 19-3.4 22.5-10.9 22.5-20 0-68.6-73.4-97.4-157.4-5.8-16.3-11.5-22.9-26.6-22.9H38.8c-16.8 0-20.2 7.9-20.2 16.7 0 15.6 20 93.1 93.1 195.5C160.4 378.1 229 416 291.4 416c37.5 0 42.1-8.4 42.1-22.9 0-66.8-3.4-73.1 15.4-73.1 8.7 0 23.7 4.4 58.7 38.1 40 40 46.6 57.9 69 57.9h58.9c16.8 0 25.3-8.4 20.4-25-11.2-34.9-86.9-106.7-90.3-111.5-8.7-11.2-6.2-16.2 0-26.2.1-.1 72-101.3 79.4-135.6z"></path></svg>
+                    </a>
+                </div>
+                <!--Gamburger icon -->
+                <div class="toggle-menu"><span></span></div>
+                <!--//Gamburger icon -->
+            </div>
+        </div>
+</header>
+<section class="portfolio portfolio--works">
+    <div class="container">
+        <div class="portfolio__title portfolio__title--works">
+            <h1 class="title">Портфолио</h1>
+        </div>
+        <div class="project-block">
+            <div class="project-block__menu">
+                <button type="button" href="#" class="project-block__toggle-item control-active title title--portfolio" data-filter="all">Все работы</button>
+                <button type="button" href="#" class="project-block__toggle-item title title--thin" data-filter=".boots">Bootstrap</button>
+                <button type="button" href="#" class="project-block__toggle-item title title--thin" data-filter=".wp">WordPress</button>
+                <button type="button" href="#" class="project-block__toggle-item title title--thin" data-filter=".frontend">Frontend</button>
+            </div>
+            <div id="project-block__content" class="project-block__content">
+                <a href="#" class="project-card project-card--big mix boots">
+                    <div class="project-card__img" >
+                        <button class="button tr button--portfolio">Смотреть проект</button>
+                        <img src="./img/portfolio/landing-travel.jpg" width="556" alt="travel landing">
+                    </div>
+                    <h2 class="project-card__title">
+                        Верстка “Форест тревел”
+                    </h2>
+                    <p class="project-card__content">
+                        Верстка многостраничного сайта. 
+                    </p>
+                </a>
+                <a href="#" class="project-card project-card--big mix boots frontend">
+                    <div class="project-card__img" >
+                        <button class="button tr button--portfolio">Смотреть проект</button>
+                        <img src="./img/portfolio/imac-mockup.jpg" width="556" alt="imac mockup">
+                    </div>
+                    <h2 class="project-card__title">
+                        Сайт для коворкинга “Мечта”
+                    </h2>
+                    <p class="project-card__content">
+                        Верстка лендинга.
+                    </p>
+                </a>
+                <a href="#" class="project-card mix wp">
+                    <div class="project-card__img" >
+                        <button class="button tr button--portfolio">Смотреть проект</button>
+                        <img src="./img/portfolio/madcap.jpg" width="360" alt="auto landing">
+                    </div>
+                    <h2 class="project-card__title">
+                        Верстка “Мир Авто”
+                    </h2>
+                    <p class="project-card__content">
+                        Верстка многостраничного сайта. 
+                    </p>
+                </a>
+                <a href="#" class="project-card mix wp boots">
+                    <div class="project-card__img" >
+                        <button class="button tr button--portfolio">Смотреть проект</button>
+                        <img src="./img/portfolio/ne-img.jpg" width="360" alt="auto landing">
+                    </div>
+                    <h2 class="project-card__title">
+                        Верстка “Мир Авто”
+                    </h2>
+                    <p class="project-card__content">
+                        Верстка многостраничного сайта. 
+                    </p>
+                </a>
+                <a href="#" class="project-card mix boots hide-card">
+                    <div class="project-card__img" >
+                        <button class="button tr button--portfolio">Смотреть проект</button>
+                        <img src="./img/portfolio/blue-orange.jpg" width="360" alt="auto landing">
+                    </div>
+                    <h2 class="project-card__title">
+                        Верстка “Мир Авто”
+                    </h2>
+                    <p class="project-card__content">
+                        Верстка многостраничного сайта. 
+                    </p>
+                </a>
+            </div>
+            <a href="#" class="show-project-cards">
+                Смотреть все работы
+            </a>
+        </div>
+    </div>
+</section>
+<section class="footer-works">
+    <div class="container">
+        <div class="footer-works__content">
+            <div class="footer-works__title">
+                <h3>За созданием сайта:</h3>
+            </div>
+            <p>обращайтесь на <a class="link link--mobile-nav" href="#">g.kasianenko@yandex.ru</a></p>
+        </div>
+        <div class="footer-works__socials">
+            <div class="socials">
+                <a href="#"class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="48" viewBox="0 0 50 48"><g><g><image width="50" height="48" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAwCAYAAABT9ym6AAAHKElEQVRoQ71afYxcVRX/nbc76y6KdBE/Utadd++sLa4JErYRqigLAaWxflABjdogmqiJqVgxgQiRGrUBDUa0fxA1AmLl0/hRgygfLsYoiFWKutC18+59bZcYrQUpurg7c48565vNdHbm3ft2Z3v+2uw953fO7737zj3n3CF0SeI4jqMoOoeZTwewFoACsArASzIXzwN4FoABsJeZdwOYsNbaboRAywFRSknAm5n5fURUWQoWM1eJ6A4Atxlj9i4FQ2yWREQp9WYAnwVwwVIdt7Mjop8B2J4kya+L4hYiUi6XVRRFNwJ4R1FHBfV3OecuT9NUtmGQhBKhOI4/SUTXAegPQl6+0gvMfKW19hsA2AfnJaK1PoGZvwdgow9shdZ3EdHmJEn+lYefS2RoaOjkUql0L4BTVyjIUNgnarXahgMHDjzdyaAjkZGRkaF6vf4wAB3qbYX1kp6enrP37dt3sG2iaPfPNWvWnFSr1R5m5tEVDq4QPDP/ZW5u7uzp6el/thq2eyM9Sqn7AJxXyMuxU37AGCNpv97schGROI6vJaJtHeL6EzNL9no1gLcC2ATguC5xeA7AnUQ04ZybJqLbAIifRcLM26y1n+9IRCn1egBSOvR0CO4aY8yXGmtxHK+KouhTzHxFUynSajqXHby9HTCfIaIv9/f375icnJQyZl6UUl8HsKWDjbyNMWPMnsZ68xuJlFK/AXBGx8xAdF6SJA+2rmeJYTuA/wJ4xDk3CcCmafr3xhYYHx/vrVarryiVSto5NxpF0XpmrkVRdHW1WhW9o0QptRnAd3Pe9qPGmDcCcKKzQERrvYmZf+DZJqcspx4qsgUrlcq5zrlFD60Zwzm3KU3THzYTIaXUHwCcluesXq+/bv/+/fK0V1yUUucD+IXH0ePGGKm2ef6NxHE8TkS/9EXHzBdaa3/k0+vGehzHHyOim3xYzHyOtXZinojW+mZm/pDPCMANxpjPBOgtWyWO4+8Q0WU+IGa+2Vr7YZKPME3TwwCO9xiJzunGmNQH3o314eHh0Z6ent8BeLEH70i5XD6RKpXKm5xz3vqfmS+z1t7SjSBDMbTWn2bmG3z6URSdJR/51QC+mKcsXZy1dk0j1fmAu7U+MjLyonq9fgDAyz2Y1wiROwFckqdIRNcnSXJVtwIsgqOU+jaAj3hs7hIijwOQEz1P3maM8aXCIvEF62qt38/MOz0Ge4SIfMSDeYpyEqdp+mSw9y4qBn7DzwiRWQClPN+1Wu3kvKami3Evgorj+DQi+qPHx5wQ8fbDzKy6NX8qSrpSqYw5537vswslcqa19lEf2Eqsa63fzsw/9WELkSM5JXjDfrMxRgYQx1ziOL6ciL7mcfy8EHkqG3Hm6e4wxnTqDVaUnNb6dplkepzsJa31vcy8waO43xgTh8yXuslqdHS0b2Zm5m++rCoTSnkj0vHJ+DNXhKy1Vnr5YyZKqQ/KTDjA4XYh8k4APw5Q3lMul9dNTEzUAnSXrbJ69erj+vr6nggcjr+L1q5de/zs7OwhAH0B3o9ZGa+UkgL10oCYZgcGBl42348opWQKHjRZZ+brrLVSaM73yt2WsbGx0uHDh3cA+Ggg9n3GmA0NIlI0SvEYKhNRFG2pVqt/DjUI0SuXy+ujKJLpyboQ/UznEmPM3fNEsuwgDdOrmgCedM59IoqiIWb+OBHJxKJVfg5g59zc3EMHDx6cLuB8QbVSqYzU6/VziegDAN5SEOPpgYEBNTk5Ods8RdnKzF9tApKtc6UxZr6x0VpvY+bP5TgyzCyF5RXWWjmbOkpWCEoPdErLwyvEg5m3WmvnD8sFIkNDQwOlUkkCKTejMfP3rbUyY3JKKZkzyd+d5B5jzMUB0Ui2lAG53HwtVSwzv9Za+8JRRLKn/h5mvqcVmZmvstZeL5NFIpI++jXtvBPRG5IkeSwkMq31RmbeFaLbToeZ322tXTg2Fs1+O5QEM6VSaXhqaupQNlWUQ2q8xYE1xsiFaFA2y3bAf5ZIZKcxRg7LBVlEZHh4eDCKosfaHERfMMYsfCPZnPhUZo6YeSpNU6mOg0g0vCul/gHgpIJk9hLRGa03WG0verJRzG8BvLTJyb+ZeZ3vQy4SlFJK7tiP+iY99s8y8/p2MXS8scoyy/0ABhrgRDTtnLvIWvtIkYA76RYkcoSZz+/UF+XeIWqtz8qamhOagpGOUhqdnxDRU0Q0U6/XZVyzylorF//BUoDIIWbemNfceW91s20m2WHEE+EeY0zuELzVPoQIEcnQ/MIkSaby/HuJiHGWdr8JIO+M6DoRIrqlv79/S/MFUCcyQUSassxFMsgGMNwGsJtE/pr98kGK2SApREQQJf/39vZuIaKtLeXFUohI9/fKpkgtEX1lcHDwW7t375Yru2ApTKSBnM1l38vMlxLRGBHdmCTJtcGe/98+yO9apOT5lXPuVqXUrqU2bv8DWu3jFjC9XXsAAAAASUVORK5CYII="/></g></g></svg>
+                </a>
+                <a href="#"class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" viewBox="0 0 50 50"><g><g><image width="50" height="50" xlink:href="data:image/png;base64,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"/></g></g></svg>
+                </a>
+                <a href="#"class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" viewBox="0 0 50 50"><g><g><image width="50" height="50" xlink:href="data:image/png;base64,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"/></g></g></svg>
+                </a>
+                <a href="#"class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" viewBox="0 0 50 50"><g><g><image width="50" height="50" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAEYklEQVRoQ92aa2iTVxjH/08una3TppcNLZuVMlcmbEOYBZuMXdyXooJfWnyzITKQtjCH7i4KY+BQZE5dC0kG64fCGmlUBJWKlzG1F2gdYxt0BCxTxurwlsZbN9O+zzhJE5Msqe+b9+QNTT6+ec7/Ob9zec5zLgRJv+XNvSUVtlADgFdAXA/m50AoJ7Y8KVwwqffACIPoMpiCAC6FpiqGRwMtD2VUgYyIrGr+utRqK1uvMtxEWA2gVKfeJDPOWQg901MPjg0FPpjUWT5hnhPI64qvOgL1Q4DaAZTn6jytXBhgjx2WfT/6W2/q1dQF0tT0zRNhh/0jAm0HMF+vM4329xm8u3wi8lVf3/v/aiwDzSCr3J4GC1M3gHqt4gbtgirxxqGe9mEtOppAnIpvK8B7Adi1iEq0iQD0yYC/9cDjNGcFaW7utY5bQwdA/N7jhPL6P1NnzXTF1kCgZTqbn6wgUQj7rW4wufNaSa3ixD01kaqN2WCygjg3+DoK3hPpkEydA4dat2RizwgyMyf2a20sc+1oW6Y58z+QmejUX4CJrbU9IiqxKz2apYCIdeKOo+QXE0Os1sqn2wUXTjx8OXmdSQFpVDw7CLQrV/WMY5eAZbXVWFZbhSpHGWw2a8Ks70IQ127czckdg3cO+tu/jBdOgMTSDr4ic8V+qX4RPt38GmprHBkru2XXcfw8Op4TCID7dtDSeDqTAHEqnt0AfZaranq555dWw/vFepTYH/VAuo1BEJFT7xnwt4t0KZaiiCzWYiu7JjEBxN6Pm9C4Ysms7WIcBGF16sFikTVHQVyKV2GgR1ZvWK0WnOl6d9beEL4kgIiecPf72/xRkMYN3uNEWCsL5OnK+Tja+U6KnKoyvu0dxtXxicT3X4N/I3z3H0NumXFi8FDbOort7G4Ldb2boqwVWPzUAgQOpmY250f+wI79pw1VOkvhydBUpYOcis8F8EWZHjKBBE79hoPdgzLdJGnRqwJEpOiG05G6ZyuxuWVlVHxeiQ0rX3wmpdLj1+9g7M/bKd/2+M4jfM/Y0IoJ0jZyur0eMNqMNtWK5TXo2LlOs0wkMo3Vm76Dyqy5TFZDgpeciucMQG8ZVdMLcvnqLWzaftio25nyfJacbs8wmGJjwsBPL8i5oTF83nHWgMfkKcIj5FJ8owx+waiiXpCuI5fQdeQno25jMwT0uzSQ5BqZHbWiILKGViFBQDwibbIXFATRyS4n/BYUJBZ+5SyIBQWJLojFkqKYlTTmMdeKJY1iSLgU7wkG1kgJ6gDMDL8EnOz3t63Ny8bKZJBHGyvZW10TQVK3umJIyTx8MA8k7fBBgMg8DjIJJPNxkICRdUBXOs+ONxrqUmLHlb9CGB27LiueIOsBnfBQNEemAqYoDrHj/Z6PtEXamILGa4UETDFc9AiYorl6S8DM9cvQ5DE956+nk2GK4sFAHKgonnAk986cf1STvhbEnzkBeJuBN3M40RcXND8A+L4gz5wyLW6Ffnj2H75FPANw5gHuAAAAAElFTkSuQmCC"/></g></g></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-works__img">
+        
+    </div>
+   
+</section>
+<script src="./libs/mixitup3/jquery/jquery-3.0.0.min.js"></script>
+<script src="./libs/mixitup3/mixitup3/mixitup.min.js"></script>
+<script src="./js/main.js"></script>
+
+</body>
+
+</html>

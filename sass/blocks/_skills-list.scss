@@ -1,0 +1,38 @@
+.skills__list li {
+
+    &::before {
+    content: "—";
+    width: 10px;
+    }
+}
+
+.skills__list {
+    line-height: 35px;
+    
+    margin-bottom: 43px;
+
+    /* Tablet */
+@media (max-width: 1199px) {
+    font-size: 18px;
+    line-height: 25px;
+
+    li:before {
+        content: "";
+    }
+
+
+    li:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    width: 270px;
+    margin-bottom: 30px;
+}
+}
+
+li::first-letter{
+    font-size: 130%;
+}

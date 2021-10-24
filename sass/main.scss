@@ -1,0 +1,42 @@
+//Base
+@import "./base/vars";
+@import "./base/mixins";
+@import "./base/base";
+
+//Sections
+@import "./sections/header";
+@import "./sections/mobile-menu";
+@import "./sections/skills";
+@import "./sections/portfolio";
+@import "./sections/timeline";
+@import "./sections/contacts";
+@import "./sections/footer";
+
+//Pages
+@import "./sections/works";
+
+
+
+
+//Blocks
+@import "./blocks/links";
+@import "./blocks/logo";
+@import "./blocks/title";
+@import "./blocks/socials";
+@import "./blocks/toggle-menu";
+@import "./blocks/icons";
+@import "./blocks/button";
+@import "./blocks/header-title";
+@import "./blocks/header-img";
+@import "./blocks/skills-list";
+@import "./blocks/project-block";
+@import "./blocks/project-card";
+@import "./blocks/timeline-block";
+@import "./blocks/timeline-item";
+@import "./blocks/contacts-data";
+@import "./blocks/contacts-form";
+
+
+
+//Media
+@import "./media/media";

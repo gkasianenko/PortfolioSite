@@ -1,0 +1,46 @@
+.timeline {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding-top: 150px;
+  padding-bottom: 50px;
+  background-image: url(./../img/timeline/bg-timeline.jpg);
+  background-position: center;
+  background-repeat: repeat-y;
+  background-size: auto;
+
+  /* Tablet */
+  @media (max-width: 1199px) {
+  padding-top: 90px;
+  padding-bottom: 40px;
+  background-color: #ffffff;
+  background-image: none;
+  }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+  padding-top: 60px;
+  padding-bottom: 15px;
+  }
+
+}
+
+
+.timeline__title {
+    text-align: center;
+  }
+  
+  .timeline__title .title {
+    
+
+    /* Tablet */
+    @media (max-width: 1199px) {
+    font-size: 52px;
+    @include bottom-line(12px, 10px);
+    }
+    /* Mobile */
+    @media (max-width: 768px) {
+        font-size: 38px;
+        @include bottom-line(12px, 6px);
+        }
+  }

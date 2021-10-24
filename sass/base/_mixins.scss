@@ -1,0 +1,38 @@
+@mixin bottom-line-link($height, $bottom) {
+    position: relative;
+    &:after, &:before {
+        content: "";
+        height: ($height);
+        width: 0%;
+        position: absolute;
+        bottom: ($bottom);
+        z-index: -1;
+        background-color: $lineColor;
+        transition: 0.5s;
+    }
+    &:after {
+        left: 50%;
+    }
+    &:before {
+        right: 50%;
+    }
+    &:hover:after {
+        width: 50%;
+    }
+    &:hover:before {
+        width: 50%;
+    }
+}
+
+@mixin bottom-line($height, $bottom) {
+    position: relative;
+    &:before {
+        content: "";
+        height: ($height);
+        width: 100%;
+        position: absolute;
+        bottom: ($bottom);
+        z-index: -1;
+        background-color: $lineColor;
+    }
+}

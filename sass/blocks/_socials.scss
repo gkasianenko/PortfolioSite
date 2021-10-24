@@ -1,0 +1,16 @@
+.socials {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.socials > * + * {
+    margin-left: 30px;
+}
+
+//Header mobile icons nav
+.social-icon {
+    width: 50px;
+    outline: none;
+} 

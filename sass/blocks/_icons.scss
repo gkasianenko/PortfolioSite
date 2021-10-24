@@ -1,0 +1,24 @@
+//Header desktop icons nav
+.header-icon {
+    width: 32px;
+   height: 28px;
+    color: $textColor;
+    outline: none;
+}
+
+svg.fa-linkedin-in, svg.fa-github, svg.fa-vk {
+    transition: color 0.5s;
+
+    &.fa-linkedin-in:hover {
+        color: #6fb2d5;
+    }
+
+    &.fa-github:hover  {
+        color: #6cc644;
+    }  
+    
+    &.fa-vk:hover {
+        color: #45668e;
+    }
+}
+

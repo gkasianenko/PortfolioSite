@@ -1,0 +1,196 @@
+/* Reset and base styles  */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%; /* sticky footer */
+}
+
+body {
+  height: 100%; /* sticky footer */
+  display: flex; /* sticky footer */
+  flex-direction: column; /* sticky footer */
+  margin: 0;
+  padding: 0;
+  font-family: $ffTitle, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #000000;
+
+  a {
+    z-index: 0;
+  }
+
+  &.noscroll {
+    overflow: hidden;
+  }
+}
+
+.noscroll {
+  overflow: hidden;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 4;
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
+a,
+a:hover {
+	display: inline-block;
+  text-decoration: none;
+  outline: none;
+}
+
+body > * {
+  flex-shrink: 0; /* sticky footer */
+}
+
+input,
+textarea,
+button {
+  font-family: inherit;
+  padding: 0;
+  outline: none;
+}
+
+input[type="submit"], [type="radio"], [type="checkbox"] {
+  appearance: none;
+  -moz-appearamce: none;
+  -webkit-appearance: none;
+}
+
+
+textarea {
+  resize: none;
+}
+
+label {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+svg {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+button,
+input {
+  outline: none;
+}
+
+button {
+  display: inline-block;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.tr {
+  transition: 0.5s;
+}
+
+/* Grid styles */
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.container--large {
+  max-width: 1600px;
+  padding-left: 0;
+  padding-right: 0;
+
+  /* Tablet */
+  @media (max-width: 1199px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+      max-width: 570px;
+  }
+}
+
+.container.container--large {
+
+  /* Tablet */
+  @media (max-width: 1199px) {
+    padding-left: 0;
+  max-width: 770px;
+  }
+  /* Mobile */
+  @media (max-width: 768px) {
+    width: 100%;
+}
+}
+
+/* Utility */
+
+.none {
+  display: none !important;
+}
+
+/* Sticky Footer */
+
+.footer {
+  margin-top: auto; /* sticky footer */
+
+  /* Just for fun */
+  text-align: center;
+  background-color: #e2e2e2;
+  padding: 50px 0;
+}

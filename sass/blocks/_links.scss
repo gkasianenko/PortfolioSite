@@ -1,0 +1,50 @@
+.nav-link {
+  @include bottom-line-link(10px, 2px);
+  &:active:before,
+  &:active:after {
+    background-color: $btnActive;
+    transition: 0.2s;
+  }
+
+  &:focus {
+    outline: 2px dotted red;
+  }
+}
+
+.mobile-nav-link {
+  color: #000000;
+  border-bottom: 2px solid;
+  outline: none;
+
+  &:active {
+    color: $aActive;
+  }
+}
+
+.link {
+  font-size: 18px;
+  font-weight: 400;
+  color: $textColor;
+  border-bottom: 1px solid;
+  outline: none;
+
+  &:hover {
+    color: $aHover;
+  }
+
+  &:active {
+    color: $aActive;
+  }
+}
+
+.link--mobile-nav {
+  color: $aHover;
+
+  &:hover {
+    color: $aActive;
+  }
+
+  &:active {
+    color: $aActive;
+  }
+}
